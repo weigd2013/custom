@@ -17,6 +17,7 @@ module.exports = {
     'vue/component-name-in-template-casing': ['error', 'PascalCase'],
     'space-before-blocks': 0,
     'key-spacing': 0,
+    'indent': 'off',
     'no-console': 'warn',
     'no-debugger': 'warn',
     eqeqeq: 'error',
