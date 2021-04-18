@@ -15,6 +15,8 @@ module.exports = {
   plugins: ['prettier', 'unused-imports'],
   rules: {
     'vue/component-name-in-template-casing': ['error', 'PascalCase'],
+    'space-before-blocks': 0,
+    'key-spacing': 0,
     'no-console': 'warn',
     'no-debugger': 'warn',
     eqeqeq: 'error',
