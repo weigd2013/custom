@@ -4,7 +4,7 @@
     <div class="toolbar--box--top-left">
       <!-- Logo box, shows spinner when loading, logo_box is--loading, loader is--animated -->
       <div class="logo--box">
-        <a href="/"><img src="../../assets/images/identity.svg"/></a>
+        <a href="/"><img src="../../assets/images/identity.svg" /></a>
       </div>
       <div class="toolbar toolbar--big flex mr--1">
         <div class="toolbar--board toolbar--board--item flex">
@@ -70,6 +70,12 @@
       <div>
         <div class="toolbar toolbar--vertical">
           <ul class="tools--menu">
+            <!-- ClearCanvas -->
+            <li id="toolbar-item-pointer" class="tools--item">
+              <div class="tools--item--button" @click="toggleClearScreenToolbox">
+                <i class="fas fa-home"></i>
+              </div>
+            </li>
             <!-- Pointer -->
             <li id="toolbar-item-pointer" class="tools--item">
               <div class="tools--item--button" @click="toggleMousePointerToolbox">
@@ -111,7 +117,7 @@
             </li>
 
             <!-- Eraser -->
-            <li id="toolbar-item-eraser" class="tools--item" style="display:none">
+            <li id="toolbar-item-eraser" class="tools--item" style="display: none">
               <div class="tools--item--button">
                 <i class="fas fa-eraser"></i>
               </div>
@@ -387,6 +393,9 @@ export default {
       this.isWhiteboardActionsOpened = false;
       this.isLogoutDropdownOpened = false;
       this.isExportActionsOpened = false;
+    },
+    toggleClearScreenToolbox(){
+      this.$nuxt.$emit(customEvents.canvasTools.clearcanvas);
     },
     togglePencilToolbox() {
       this.$nuxt.$emit(customEvents.canvasTools.drawing, { drawingMode: true });

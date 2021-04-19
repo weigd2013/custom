@@ -14,6 +14,7 @@ export default {
   },
   mounted() {
     this.$nuxt.$on(customEvents.canvasTools.clearCanvas, () => {
+      console.log("customEvents.canvasTools.clearCanvas");
       this.clearCanvas();
     });
   },
