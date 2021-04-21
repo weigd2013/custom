@@ -314,6 +314,8 @@ import ShareWhiteboardModal from '~/components//modals/ShareWhiteboard.vue';
 import colorPalette from '~/components/_helpers/colorPalette.js';
 import customEvents from '~/utils/customEvents';
 
+
+
 import WhitebirdLogger from '~/utils/WhitebirdLogger';
 
 const logger = new WhitebirdLogger('WhiteBoardControls.vue');
@@ -395,7 +397,8 @@ export default {
       this.isExportActionsOpened = false;
     },
     toggleClearScreenToolbox(){
-      this.$nuxt.$emit(customEvents.canvasTools.clearcanvas);
+      console.log(customEvents.canvasTools.CanvasClear);
+      this.$nuxt.$emit(customEvents.canvasTools.CanvasClear);
     },
     togglePencilToolbox() {
       this.$nuxt.$emit(customEvents.canvasTools.drawing, { drawingMode: true });

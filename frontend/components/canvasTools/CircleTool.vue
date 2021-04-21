@@ -26,6 +26,7 @@ export default {
   },
   mounted() {
     this.$nuxt.$on(customEvents.canvasTools.circle, (payload) => {
+      console.log("customEvents.canvasTools.circle");
       this.canvas.isDrawingMode = false;
       this.createCircle(payload);
     });

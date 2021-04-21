@@ -13,8 +13,11 @@ export default {
     },
   },
   mounted() {
-    this.$nuxt.$on(customEvents.canvasTools.clearCanvas, () => {
-      console.log("customEvents.canvasTools.clearCanvas");
+    console.log("clearcanvas");
+    console.log(customEvents.canvasTools.CanvasClear);
+    this.$nuxt.$on(customEvents.canvasTools.CanvasClear, () => {
+      console.log("customEvents.canvasTools.CanvasClear");
+      console.log("customEvents.canvasTools.CanvasClear");
       this.clearCanvas();
     });
   },

@@ -13,6 +13,7 @@ export default {
     },
   },
   mounted() {
+    console.log("DeleteTool");
     // Activate Event-Listener for 'Delete-Key', when Mouse is over canvas
     this.canvas.on('mouse:over', (event) => {
       if (event.target === null) {
